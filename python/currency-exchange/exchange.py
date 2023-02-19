@@ -1,23 +1,21 @@
 def exchange_money(budget, exchange_rate):
     """
-
+    This function should return the value of the exchanged currency.
     :param budget: float - amount of money you are planning to exchange.
     :param exchange_rate: float - unit value of the foreign currency.
     :return: float - exchanged value of the foreign currency you can receive.
     """
-
-    pass
+    return budget / exchange_rate
 
 
 def get_change(budget, exchanging_value):
     """
-
+    This function should return the amount of money that is left from the budget.
     :param budget: float - amount of money you own.
     :param exchanging_value: float - amount of your money you want to exchange now.
     :return: float - amount left of your starting currency after exchanging.
     """
-
-    pass
+    return exchanging_value - budget
 
 
 def get_value_of_bills(denomination, number_of_bills):
@@ -27,8 +25,7 @@ def get_value_of_bills(denomination, number_of_bills):
     :param number_of_bills: int - amount of bills you received.
     :return: int - total value of bills you now have.
     """
-
-    pass
+    return denomination * number_of_bills
 
 
 def get_number_of_bills(budget, denomination):
