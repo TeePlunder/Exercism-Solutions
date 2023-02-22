@@ -1,10 +1,4 @@
 def leap_year(year):
-    t1 = year % 4 == 0
-    t2 = year % 100 == 0
-    t3 = year % 400 == 0
-    t4 = (year % 100 and year % 400) == 0
-    t5 = year % 4 == 0 or (year % 100 and year % 400) == 0
-
     if (year % 4 == 0):
         if (year % 100 == 0):
             if (year % 400 == 0):
