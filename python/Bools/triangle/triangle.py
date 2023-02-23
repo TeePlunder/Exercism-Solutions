@@ -6,6 +6,8 @@ def equilateral(sides):
 def isosceles(sides):
     a, b, c = sides
 
+    return equilateral(sides) or a == b or a == c or b == c
+
 
 def scalene(sides):
     a, b, c = sides
