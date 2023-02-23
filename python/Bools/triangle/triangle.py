@@ -1,10 +1,11 @@
 def equilateral(sides):
-    pass
+    a, b, c = sides
+    return a == b == c
 
 
 def isosceles(sides):
-    pass
+    a, b, c = sides
 
 
 def scalene(sides):
-    pass
+    a, b, c = sides
