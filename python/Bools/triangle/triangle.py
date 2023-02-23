@@ -11,3 +11,4 @@ def isosceles(sides):
 
 def scalene(sides):
     a, b, c = sides
+    return a != b != c
