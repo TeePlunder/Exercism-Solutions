@@ -11,8 +11,8 @@ FIVES = (lambda dice: check_dice_for_number(dice, 5))
 SIXES = (lambda dice: check_dice_for_number(dice, 6))
 FULL_HOUSE = None
 FOUR_OF_A_KIND = (lambda dice: four_of_kind(dice))
-LITTLE_STRAIGHT = None
-BIG_STRAIGHT = None
+LITTLE_STRAIGHT = (lambda dice: 30 if sorted(dice) == [1, 2, 3, 4, 5] else 0)
+BIG_STRAIGHT = (lambda dice: 30 if sorted(dice) == [2, 3, 4, 5, 6] else 0)
 CHOICE = sum
 
 
