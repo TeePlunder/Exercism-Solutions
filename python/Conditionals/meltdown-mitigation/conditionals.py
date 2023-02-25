@@ -42,9 +42,9 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
 
     if (percentage >= 80.00):
         return 'green'
-    if (percentage < 80.00 and percentage >= 60.00):
+    if (60.0 <= percentage < 80):
         return 'orange'
-    if (percentage < 60.00 and percentage >= 30.00):
+    if (30.0 <= percentage < 60.0):
         return 'red'
     if (percentage < 30.00):
         return 'black'
