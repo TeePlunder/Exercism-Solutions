@@ -13,7 +13,9 @@ def is_criticality_balanced(temperature: float, neutrons_emitted: float):
     - The number of neutrons emitted per second is greater than 500.
     - The product of temperature and neutrons emitted per second is less than 500000.
     """
-    return True if temperature < 800.00 and neutrons_emitted > 500.00 and (temperature * neutrons_emitted) < 500000.00 else False
+    if (temperature < 800.00 and neutrons_emitted > 500.00 and (temperature * neutrons_emitted) < 500000.00):
+        return True
+    return False
 
 
 def reactor_efficiency(voltage, current, theoretical_max_power):
