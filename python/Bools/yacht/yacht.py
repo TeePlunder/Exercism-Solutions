@@ -1,3 +1,5 @@
+from typing import List
+
 # Score categories.
 # Change the values as you see fit.
 YACHT = None
@@ -14,14 +16,11 @@ BIG_STRAIGHT = None
 CHOICE = sum
 
 
-def checkDiceForNumber(dice, searchedNumber):
-    count = 0
-    for number in dice:
-        if (number == searchedNumber):
-            count += 1
+def checkDiceForNumber(dice: List[int], searchedNumber: int):
+    return searchedNumber * dice.count(searchedNumber)
 
 
-def score(dice, category):
+def score(dice: List[int], category):
     """checks the score of the dice
 
     Args:
