@@ -65,10 +65,10 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
     sum_value = temperature * neutrons_produced_per_second
 
     if sum_value < get_percentage(90.0, threshold):
-        return "LOW"
+        return 'LOW'
     if get_percentage(90.0, threshold) <= sum_value <= get_percentage(110.0, threshold):
-        return "NORMAL"
-    return "DANGER"
+        return 'NORMAL'
+    return 'DANGER'
 
 
 def get_percentage(percent: float, whole: float):
