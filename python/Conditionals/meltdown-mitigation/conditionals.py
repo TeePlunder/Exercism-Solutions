@@ -40,7 +40,6 @@ def reactor_efficiency(voltage, current, theoretical_max_power):
     generated_power = voltage * current
     percentage: float = (generated_power / theoretical_max_power) * 100
 
-    print(percentage)
     if (percentage >= 80.00):
         return 'green'
     if (percentage < 80.00 and percentage >= 60.00):
