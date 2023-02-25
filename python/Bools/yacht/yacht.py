@@ -2,7 +2,7 @@ from typing import List
 
 # Score categories.
 # Change the values as you see fit.
-YACHT = None
+YACHT = (lambda dice: 50 if len(set(dice)) == 1 else 0)
 ONES = (lambda dice: check_dice_for_number(dice, 1))
 TWOS = (lambda dice: check_dice_for_number(dice, 2))
 THREES = (lambda dice: check_dice_for_number(dice, 3))
