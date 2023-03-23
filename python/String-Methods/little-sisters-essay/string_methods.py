@@ -10,6 +10,7 @@ def capitalize_title(title):
     for word in title.split():
         if word[0].islower():
             title = title.replace(word, word.capitalize())
+    return title
 
 
 def check_sentence_ending(sentence):
