@@ -70,9 +70,6 @@ def value_of_ace(card_one, card_two):
     return 11 if difference >= 11 else 1
 
 
-value_of_ace('Q', 'A')
-
-
 def is_blackjack(card_one, card_two):
     """Determine if the hand is a 'natural' or 'blackjack'.
 
