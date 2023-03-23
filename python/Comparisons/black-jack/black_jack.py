@@ -20,7 +20,8 @@ def value_of_card(card):
             return 10
         case 'A':
             return 1
-    return int(card)
+        case _:
+            return int(card)
 
 
 def higher_card(card_one, card_two):
