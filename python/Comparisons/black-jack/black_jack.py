@@ -114,4 +114,4 @@ def can_double_down(card_one, card_two):
     value_of_card_two = value_of_card(card_two)
     sum_value = value_of_card_one + value_of_card_two
 
-    return 9 <= sum_value and sum_value <= 11
+    return 9 <= sum_value <= 11
