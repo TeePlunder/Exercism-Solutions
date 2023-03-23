@@ -39,5 +39,9 @@ def replace_word_choice(sentence, old_word, new_word):
     :param new_word: str - replacement word.
     :return: str - input sentence with new words in place of old words.
     """
-
-    pass
+    for word in sentence.split():
+        if check_sentence_ending(word):
+            word = word[:-1]
+        if word == old_word:
+            sentence = sentence.replace(word, new_word)
+    return sentence
