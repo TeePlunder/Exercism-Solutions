@@ -14,5 +14,8 @@ func CalculateWorkingCarsPerMinute(productionRate int, successRate float64) int 
 
 // CalculateCost works out the cost of producing the given number of cars.
 func CalculateCost(carsCount int) uint {
-	panic("CalculateCost not implemented")
+	modValue := carsCount % 10
+	togetherProduction := int(carsCount / 10) * 95000
+	individualProduction := modValue * 10000
+	return uint(togetherProduction) + uint(individualProduction)
 }
