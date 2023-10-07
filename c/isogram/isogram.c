@@ -12,10 +12,10 @@ bool is_isogram(const char phrase[]) {
     char currentLetterToCheck = tolower(phrase[i]);
     int currentLetterIndex = i;
     for (int j = 0; j < lengthOfPhrase; j++) {
-      if(currentLetterIndex == j){
+      char currentLetter = tolower(phrase[j]);
+      if(currentLetterIndex == j || !isalpha(currentLetter)){
         continue;
       }
-      char currentLetter = tolower(phrase[j]);
       if (currentLetter == currentLetterToCheck) {
         if (letterFoundCount > 0) {
           return false;
