@@ -1,5 +1,6 @@
 #include "isogram.h"
 #include <string.h>
+#include <ctype.h>
 
 bool is_isogram(const char phrase[]) {
   if (phrase == NULL) {
@@ -8,15 +9,15 @@ bool is_isogram(const char phrase[]) {
   int lengthOfPhrase = (int)strlen(phrase);
   int letterFoundCount = 0;
   for (int i = 0; i < lengthOfPhrase; i++) {
-    char currentLetterToCheck = phrase[i];
+    char currentLetterToCheck = tolower(phrase[i]);
     int currentLetterIndex = i;
     for (int j = 0; j < lengthOfPhrase; j++) {
-      char currentLetter = phrase[j];
       if(currentLetterIndex == j){
         continue;
       }
+      char currentLetter = tolower(phrase[j]);
       if (currentLetter == currentLetterToCheck) {
-        if (letterFoundCount >= 1) {
+        if (letterFoundCount > 0) {
           return false;
         }
         letterFoundCount++;
