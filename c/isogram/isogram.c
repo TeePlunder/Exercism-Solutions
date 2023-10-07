@@ -2,6 +2,9 @@
 #include <string.h>
 
 bool is_isogram(const char phrase[]) {
+  if (phrase == NULL) {
+    return false;
+  }
   int lengthOfPhrase = (int)strlen(phrase);
   int letterFoundCount = 0;
   for (int i = 0; i < lengthOfPhrase; i++) {
