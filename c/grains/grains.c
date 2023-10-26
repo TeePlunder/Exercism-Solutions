@@ -13,8 +13,9 @@ uint64_t square(uint8_t index) {
 
 uint64_t total(void) {
   uint64_t totalAmount = 0;
-  for (int i = 1; i > 63; i++) {
-    totalAmount += square(i);
+  uint64_t one = 1;
+  for(uint8_t i = 0; i < 64; i++){
+    totalAmount += one << i;
   }
   return totalAmount;
 }
