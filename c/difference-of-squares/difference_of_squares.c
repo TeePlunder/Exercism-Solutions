@@ -21,4 +21,6 @@ unsigned int square_of_sum(unsigned int number) {
   return pow(sum, 2);
 }
 
-unsigned int difference_of_squares(unsigned int number);
+unsigned int difference_of_squares(unsigned int number) {
+  return square_of_sum(number) - sum_of_squares(number);
+}
