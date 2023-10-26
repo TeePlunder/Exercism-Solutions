@@ -3,10 +3,18 @@
 #include <stdio.h>
 
 uint64_t square(uint8_t index) {
-  if (index <= 2) {
+  if (index == 0) {
+    return 0ULL;
+  }
+
+  if (index <= 1) {
     return 1ULL;
   }
-  printf("%hhu", index);
+
+  if (index <= 2) {
+    return 2ULL;
+  }
+
   uint64_t value = (1ULL << (index - 1));
   return value;
 }
