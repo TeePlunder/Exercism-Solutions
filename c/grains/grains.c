@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 uint64_t square(uint8_t index) {
-  if (index == 0) {
+  if (index == 0 || index > 64) {
     return 0ULL;
   }
 
